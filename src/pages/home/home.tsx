@@ -1,7 +1,16 @@
 import React from "react";
-
+import "./home.scss";
 const Home = () => {
-  return <div>index</div>;
+  return (
+    <>
+      <div className="root">
+        <div className="main-wrap">
+          {" "}
+          <img src="img/screenshot1.png" alt="logo" />
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Home;
