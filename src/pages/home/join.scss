@@ -1,0 +1,108 @@
+.join-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.join-root .login-wrap {
+  border: 1px solid #c8c8c8;
+  padding: 20px 40px 20px 40px;
+  min-width: 250px;
+  font-size: 13px;
+}
+.join-root .join-wrap {
+  border: 1px solid #c8c8c8;
+  padding: 40px;
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+.join-root .join-wrap .etc-wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.join-root .join-wrap .input-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.join-root .join-wrap .ment1 {
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+.join-root .join-wrap .join-btn .join {
+  width: 250px;
+  height: 30px;
+  border: none;
+  background: #35a3ff;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.join-root .join-wrap .input-wrap > input {
+  height: 20px;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  background-color: #fafafa;
+  padding: 8px;
+}
+.join-root .join-wrap .etc-wrap .etc1 {
+  height: 0.5px;
+  background: #a9a4a4;
+  width: 125px;
+  margin-right: 10px;
+}
+.join-root .join-wrap .etc-wrap .etc2 {
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+  color: #a9a4a4;
+}
+.join-root .join-wrap .etc-wrap .etc3 {
+  height: 0.5px;
+  background: #a9a4a4;
+  width: 125px;
+  margin-left: 10px;
+}
+.join-root .join-wrap .img-wrap {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.join-root .join-wrap .img-wrap > button {
+  width: 250px;
+  height: 30px;
+  border: none;
+  background: #288de1;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.join-root .join-wrap .img-wrap > button > img {
+  width: 17px;
+  margin-right: 5px;
+}
+.join-root .join-wrap .img-wrap .ment {
+  font-size: 17px;
+  font-weight: 600;
+  color: #a9a4a4;
+  margin-bottom: 20px;
+}
+.join-root .join-wrap .img-wrap .logo-image {
+  width: 150px;
+  margin-bottom: 10px;
+}

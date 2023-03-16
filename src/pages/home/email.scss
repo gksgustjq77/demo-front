@@ -1,0 +1,70 @@
+.email-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.email-root .email-wrap {
+  border: 1px solid #c8c8c8;
+  padding: 20px 40px 20px 40px;
+  max-width: 250px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.email-root .email-wrap .email-img-wrap {
+  background: url("total.png") -430px -5px no-repeat;
+  width: 87px;
+  height: 62px;
+  background-size: 545px 521px;
+  margin-bottom: 15px;
+}
+.email-root .email-wrap .ment {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+.email-root .email-wrap .input-wrap {
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+.email-root .email-wrap .input-wrap > input {
+  height: 20px;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  background-color: #fafafa;
+  padding: 8px;
+}
+.email-root .email-wrap .input-wrap > button {
+  width: 250px;
+  height: 30px;
+  border: none;
+  background: #35a3ff;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.email-root .login-wrap {
+  border: 1px solid #c8c8c8;
+  padding: 20px 40px 20px 40px;
+  min-width: 250px;
+  font-size: 13px;
+}
+.description1 {
+  margin-bottom: 15px;
+}
+.back-ment {
+  font-weight: 700;
+  color: #35a3ff;
+  cursor: pointer;
+}

@@ -1,0 +1,14 @@
+.footer-wrap {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.footer-wrap .footer1 {
+  display: flex;
+  justify-content: center;
+}
+.footer-wrap .footer1 > div {
+  margin: 10px;
+}

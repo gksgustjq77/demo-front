@@ -1,0 +1,29 @@
+.birth-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.birth-root .birth-wrap {
+  border: 1px solid #c8c8c8;
+  padding: 20px 40px 20px 40px;
+  min-width: 250px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.birth-root .birth-wrap .ment {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.birth-root .birth-wrap .birth-img-wrap {
+  background-image: url("total.png");
+  height: 96px;
+  width: 144px;
+  background-position: 0 0;
+  margin-bottom: 15px;
+}

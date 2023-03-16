@@ -1,11 +1,92 @@
 .root {
-  min-height: 100vh;
+  min-height: 95vh;
   display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.root .right-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.root .right-wrap .join-wrap {
+  max-width: 350px;
+  border: 1px solid #c8c8c8;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 12px;
+}
+.root .right-wrap .join-wrap > span {
+  color: #1414f4;
+  cursor: pointer;
+}
+.root .member-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  margin-top: 12px;
+  max-width: 350px;
+}
+.root .member-wrap {
+  border: 1px solid #c8c8c8;
+}
+.root .member-wrap .login-wrap {
+  padding: 15px;
+}
+.root .member-wrap .login-wrap .input-wrap {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
 }
 
+.root .member-wrap .login-wrap .input-wrap > input {
+  width: 250px;
+  height: 20px;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  background-color: #fafafa;
+  padding: 8px;
+}
+.root .member-wrap .login-wrap .input-wrap > button {
+  width: 250px;
+  height: 30px;
+  border: none;
+  background: #35a3ff;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.root .member-wrap .login-wrap .input-wrap > input:focus {
+  border-color: black;
+  outline: none;
+}
+
+.root .member-wrap .login-wrap .logo-image {
+  width: 150px;
+  padding: 15px;
+}
+
+.root .member-wrap .password-wrap {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #1414f4;
+}
+.root .member-wrap .password-wrap > span {
+  cursor: pointer;
+}
 .main-wrap {
   background-image: url("home-phones.png");
   background-size: 400px;
   height: 500px;
-  flex-basis: 430.32px;
+  flex-basis: 390.32px;
+}
+.main-wrap .in-image {
+  height: 470px;
+  margin-left: 95px;
+  margin-top: 20px;
 }
