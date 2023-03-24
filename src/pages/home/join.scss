@@ -27,6 +27,7 @@
 .join-root .join-wrap .input-wrap {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .join-root .join-wrap .ment1 {
   font-size: 11px;
@@ -105,4 +106,13 @@
 .join-root .join-wrap .img-wrap .logo-image {
   width: 150px;
   margin-bottom: 10px;
+}
+
+.filed-x {
+  position: absolute;
+  //   background: url("total.png") -495px -324px no-repeat;
+  //   width: 22px;
+  //   height: 22px;
+  right: 11px;
+  top: 7px;
 }

@@ -1,16 +1,45 @@
-import React from "react";
 import "./home.scss";
 import os from "../common/axios.js";
 import axios from "axios";
+import React, { useState, useMemo, useCallback } from "react";
 import Footer from "../common/footer";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-const loginClick = async () => {
-  await axios.post("/api/v1/member/login", {
-    userId: "ddd",
-    pass: "111",
-  });
-};
+import {
+  BrowserRouter,
+  Link,
+  Route,
+  Switch,
+  useHistory,
+} from "react-router-dom";
+
 const Home = () => {
+  const navi = useHistory();
+  const [inputs, setInputs] = useState({
+    memberUserName: "",
+    memberPassword: "",
+  });
+
+  const change = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let { value = "", name = "" } = e.target;
+    setInputs({
+      ...inputs,
+      [name]: value,
+    });
+  };
+
+  const loginClick = async () => {
+    await axios
+      .post("/api/v1/member/login", {
+        memberUserName: inputs.memberUserName,
+        memberPassword: inputs.memberPassword,
+      })
+      .then((res) => {
+        if (res.data.result.code === "success") {
+          sessionStorage.setItem("loginId", res.data.data.memberUserName);
+          navi.push("/main/profile");
+        }
+      });
+  };
+
   return (
     <>
       <div>
@@ -30,9 +59,18 @@ const Home = () => {
                 <div className="input-wrap">
                   <input
                     type="text"
-                    placeholder="전화번호, 사용자 이름 또는 이메일"
+                    name="memberUserName"
+                    onChange={change}
+                    value={inputs.memberUserName}
+                    placeholder="이메일"
                   ></input>
-                  <input type="text" placeholder="비밀번호"></input>
+                  <input
+                    type="text"
+                    name="memberPassword"
+                    placeholder="비밀번호"
+                    value={inputs.memberPassword}
+                    onChange={change}
+                  ></input>
                   <button onClick={loginClick}>로그인</button>
                 </div>
 

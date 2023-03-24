@@ -1,12 +1,34 @@
 import "./email.scss";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, useHistory, Link } from "react-router-dom";
 import axios from "axios";
+import { useState } from "react";
+interface CustomizedState {
+  props: {
+    userId: string;
+  };
+}
 const Email = () => {
+  const [authCode, setAuthCode] = useState("");
   const location = useLocation();
-  const props = location.state;
-  console.log(props);
+  const navi = useHistory();
+  const props = location.state as CustomizedState;
 
-  const next = () => {};
+  const next = () => {
+    axios
+      .post("/api/v1/mail/verifi", {
+        memberUserName: props.props.userId,
+        memberAuthCode: authCode,
+      })
+      .then((res) => {
+        if (res.data.code === "success") {
+          navi.push("/", { replace: true });
+        }
+      });
+  };
+
+  const change = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setAuthCode(e.target.value);
+  };
   return (
     <>
       <div>
@@ -15,12 +37,16 @@ const Email = () => {
             <div className="email-img-wrap"></div>
             <span className="ment">인증 코드 입력</span>
             <div className="description1">
-              {props.userId} 주소로 전송된 인증 코드를 입력하세요.
+              {props.props.userId} 주소로 전송된 인증 코드를 입력하세요.
               <span>코드 재전송</span>
             </div>
 
             <div className="input-wrap">
-              <input type="text" placeholder="인증코드"></input>
+              <input
+                type="text"
+                placeholder="인증코드"
+                onChange={change}
+              ></input>
               <button onClick={next}>다음</button>
               <div className="back-ment">돌아가기</div>
             </div>

@@ -1,6 +1,6 @@
 import Footer from "../common/footer";
 import "./join.scss";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import React, { useState, useMemo, useCallback } from "react";
 import axios from "axios";
 const Join = () => {
@@ -69,6 +69,7 @@ const Join = () => {
                 value={inputs.userName}
                 placeholder="성명"
               ></input>
+
               <input
                 type="text"
                 name="userNick"
@@ -93,8 +94,12 @@ const Join = () => {
             <div className="join-btn">
               <Link
                 style={{ textDecoration: "none", color: "white" }}
-                to="/home/email"
-                state={inputs}
+                to={{
+                  pathname: `/home/email`,
+                  state: {
+                    props: inputs,
+                  },
+                }}
               >
                 <button className="join" onClick={join}>
                   가입

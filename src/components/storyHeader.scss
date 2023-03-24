@@ -1,0 +1,43 @@
+.stories-root {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  align-items: center;
+}
+
+.instagram-stories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instagram-stories img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  cursor: pointer;
+  padding: 2px;
+}
+
+.instagram-stories img:last-child {
+  margin-right: 0;
+}
+
+.story-thumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.story-caption {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  text-align: center;
+  white-space: nowrap; /* 한 줄에만 표시되도록 설정 */
+  overflow: hidden; /* 넘친 부분을 감추기 */
+  text-overflow: ellipsis; /* 넘친 부분을 ...으로 대체 */
+  max-width: 50px;
+}

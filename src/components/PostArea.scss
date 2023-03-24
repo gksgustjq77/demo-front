@@ -1,0 +1,20 @@
+.post-wrap {
+  width: 450px;
+  margin: 0 auto;
+}
+
+.post-content {
+  display: flex;
+  align-items: center;
+}
+.post-content > img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.post-wrap .post-user {
+  display: flex;
+  flex-direction: column;
+}
