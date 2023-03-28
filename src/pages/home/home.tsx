@@ -35,6 +35,7 @@ const Home = () => {
       .then((res) => {
         if (res.data.result.code === "success") {
           sessionStorage.setItem("loginId", res.data.data.memberUserName);
+          sessionStorage.setItem("memberId", res.data.data.memberId);
           navi.push("/main/profile");
         }
       });
